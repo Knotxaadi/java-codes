@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Travel guide</title>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Travel world</h1>
+    </header>
+    <main>
+      <section>
+        <h1>types</h1>
+        <ul>
+          <li>water</li>
+          <li>road</li>
+          <li>airways</li>
+        </ul>
+      </section>
+      <section>
+        <h1>contact</h1>
+        <form action="">
+          <div>
+            <label for="place">Destination:</label>
+            <input type="text" name="place" id="place" />
+            <br />
+            <button type="button" onclick="planTrip()">Plan Trip</button>
+          </div>
+        </form>
+        <p id="message"></p>
+      </section>
+    </main>
+    <script>
+      function planTrip() {
+        let place = document.getElementById("place").value;
+
+        if (place == "") {
+          document.getElementById("message").innerHTML =
+            "please Enter destination";
+        } else {
+          document.getElementById("message").innerHTML =
+            "Your trip to " + place + " sound exciting!";
+        }
+      }
+    </script>
+  </body>
+</html>
